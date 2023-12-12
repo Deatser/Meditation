@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link 
+	rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+	integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer" 
+	/>
+  <title>Игровая медитация</title>
+  <link rel="stylesheet" href="css/game.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="icon" href="../img/lotus.ico">
+	<link rel="icon" href="https://cdn-icons-png.flaticon.com/128/2982/2982182.png">
+
+</head>
+<body>
+	<header>
+		<div class="navbar">
+			<div class="logo"><a href="index.html">Медитация</a></div> 
+			<ul class="links">
+				
+				<li><a href="gallery.html">Визуальная медитация</a></li>
+				<li><a href="sounds.html">Звуковая медитация</a></li>
+				<li><a href="game.html">Игровая медитация</a></li>
+			</ul>
+			<a href="registration.html" class="action_btn">Регистрация</a>
+			<div class="toggle_btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+	
+		<div class="dropdown_menu">
+			<li><a href="gallery.html">Визуальная медитация</a></li>
+			<li><a href="sounds.html">Звуковая медитация</a></li>
+			<li><a href="game.html">Игровая медитация</a></li>
+				<li><a href="registration.html" class="action_btn">Регистрация</a></li>
+			</ul>
+		</div>
+		</header>
+
+
+		<section class="registra" id="hero"> 
+
+			<h1>Игровая медитация</h1>
+			<p>Расслабьтесь, лопая пузырчатую плёнку</p>
+	
+
+			<div class="box1">
+				<div class="container">
+					<img src="img/plenka.jpg" alt="пленка">
+					<div class="box">
+						<button class="custom-button" onclick="playTrack()"></button>
+						<button class="custom-button" onclick="playTrack()"></button>
+						<button class="custom-button" onclick="playTrack()"></button>
+						<button class="custom-button" onclick="playTrack()"></button>
+						<button class="custom-button" onclick="playTrack()"></button>
+						<button class="custom-button" onclick="playTrack()"></button>
+						<button class="custom-button" onclick="playTrack()"></button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+      <ul class="menu">
+				
+				<li><a href="https://github.com/deatser" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+				<li><a href="https://vk.com/deatser" target="_blank"><ion-icon name="logo-vk"></ion-icon></a></li>
+				<li><a href="https://discordapp.com/users/665505163754340363" target="_blank"><ion-icon name="logo-discord"></ion-icon></ion-icon></a></li>
+			</ul>
+			<p> 2023 | Селезнев С. А. | РТУ МИРЭА</p>
+    </footer>
+</body>
+<script>
+	const toggleBtn = document.querySelector('.toggle_btn')
+	const toggleBtnIcon = document.querySelector('.toggle_btn i')
+	const dropDownMenu = document.querySelector('.dropdown_menu')
+
+	toggleBtn.onclick = function (){
+		dropDownMenu.classList.toggle('open')
+		const isOpen = dropDownMenu.classList.contains('open')
+		toggleBtnIcon.classList = isOpen
+				? 'fa-solid fa-xmark'
+				: 'fa-solid fa-bars'
+	}
+</script>
+<script>
+		let curr_track = document.createElement('audio');
+		curr_track.src = 'music/plenka.mp3';
+    curr_track.load();
+		function playTrack(){
+			curr_track.play();
+		}
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

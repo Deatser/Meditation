@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Comfortaa&family=Shantell+Sans:wght@500&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Comfortaa&family=Exo+2:wght@300&family=Nunito:wght@300&family=Shantell+Sans:wght@500&display=swap');
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Comfortaa', sans-serif;
+}
+
+body{
+	
+	min-height: 100vh;
+	background-image: url('../img/ChinaLore.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none; 
+	color: #fff;
+	font-size: 1rem;
+	transition: 0.5s;
+}
+
+a:hover {
+	color: orange;
+}
+
+
+main{
+	display: flex;
+	justify-content: center;
+
+}
+/* HERO */
+section#hero {
+
+	margin: 0 auto;
+	max-width: 1000px;
+	min-height: calc(100vh); /*Тут px как top в DROPDOWN MENU */
+	padding-bottom: 20vh;
+	width: 120vh;
+	padding-top: 5vh; /*отсуп от хэдэра */
+	display: flex;
+	padding-left: 5vh;
+	padding-right: 5vh;
+	flex-direction: column;
+
+	
+	text-align: center;
+	color: #fff;
+	
+}
+
+
+.hmain{
+	text-align: left;
+}
+
+.textmain {
+	text-align: justify;
+}
+
+
+#hero h1{
+	font-size: 3rem;
+	margin-bottom: 2rem;
+	margin-top: 4rem;
+}
+
+#hero h2{
+	font-size: 3.5rem;
+	margin-bottom: 0.7rem;
+	margin-top: 4rem;
+}
+
+img{
+	height: 30%;
+	border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+
+#hero p{
+	font-size: 1.3rem;
+	font-family: 'Exo 2', sans-serif;
+	letter-spacing: 1px;
+  width: 100%;
+	margin-bottom: 8vh;
+}
+
+@media (max-width: 992px) {
+	section#hero{
+		max-width: 800px;
+	}
+}
+
+@media (max-width: 715px) {
+	section#hero{
+		
+		max-width: 600px;
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 576px) {
+	section#hero{
+		
+		max-width: 400px;
+		font-size: 16px;
+	}
+}
